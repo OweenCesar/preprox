@@ -1,0 +1,33 @@
+Dont forget that:
+
+
+React will act as the frontend of our application,
+It's where you design and build things like buttons, forms, tables, and charts that users will interact with.
+
+
+About FASTAPI:
+
+FastAPI is the framework that defines the structure and logic of your backend.
+It’s where we define routes (API endpoints) that handle specific user requests (like uploading CSV files).
+FastAPI is responsible for validating inputs, handling requests, and sending responses back to the client (your React frontend)
+
+
+ABOUT UVICORN (ASGI SERVER):
+
+Uvicorn is the server that runs the FastAPI app.
+It's responsible for actually starting the server and making sure your API is accessible over the network (local or online).
+It hosts the FastAPI app and listens for incoming HTTP requests (like uploading files) and sends the corresponding responses back to the user.
+Think of Uvicorn as the engine that powers your FastAPI app.
+
+
+
+When a user sends a request (e.g., uploading a CSV file), Uvicorn forwards it to FastAPI, which processes it and sends a response back.
+
+
+**Example Workflow**:
+
+    User uploads a CSV in the React frontend.
+    React sends a POST request to FastAPI with the CSV file.
+    FastAPI processes the CSV, cleans the data, and computes statistics.
+    FastAPI sends the processed data or results back to React.
+    React displays the results (like showing the cleaned data in a table or providing statistics in a chart).

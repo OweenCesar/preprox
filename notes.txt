@@ -1,0 +1,4 @@
+To keep things clean and organized, it's best to use a virtual environment. 
+This will isolate the project's dependencies from other Python projects.
+
+
